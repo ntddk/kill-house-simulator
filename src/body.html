@@ -1,0 +1,45 @@
+
+<canvas id="cv" aria-label="Wireframe view of a one- to four-man team clearing a randomly generated building"></canvas>
+
+<div class="hud tl">
+  <div class="brand">KILL HOUSE <span>SIMULATOR</span></div>
+  <div class="struct" id="hStruct">STRUCTURE</div>
+  <dl class="stats">
+    <div><dt>ROOMS</dt><dd id="hRooms">00 / 00</dd></div>
+    <div><dt>HOSTILES</dt><dd id="hHost">ON</dd></div>
+    <div><dt>ELAPSED</dt><dd id="hTime">00:00</dd></div>
+    <div><dt>DANGER AREAS</dt><dd id="hDanger">—</dd></div>
+  </dl>
+  <div class="phase" id="hPhase"></div>
+</div>
+
+<div class="hud tr">
+  <canvas id="mm" aria-hidden="true"></canvas>
+  <div class="legend">
+    <span><i style="background:var(--clear)"></i>CLEARED</span>
+    <span><i style="background:var(--team)"></i>TEAM</span>
+    <span><i style="background:var(--hostile)"></i>HOSTILE</span>
+  </div>
+</div>
+
+<ol class="hud log" id="log" aria-live="off"></ol>
+
+<div class="banner" id="banner">
+  <div class="rule"></div>
+  <div class="big">BUILDING SECURE</div>
+  <div class="sm" id="bannerSub"></div>
+  <div class="rule"></div>
+</div>
+
+<div class="ctrl" id="ctrl">
+  <button id="bHost" type="button" aria-pressed="true">Hostiles<b>ON</b></button>
+  <button id="bCam" type="button">Camera<b>AUTO</b></button>
+  <button id="bTeam" type="button">Team<b>4</b></button>
+  <button id="bSpeed" type="button">Speed<b>1×</b></button>
+  <button id="bPause" type="button" aria-pressed="false">Pause</button>
+  <button id="bNew" type="button">New map</button>
+  <button id="bFull" type="button">Fullscreen</button>
+  <div class="keys">C camera · 1 auto 2 orbit 3 follow 4 chase 5 helmet 6 plan · H hostiles · T team size · S speed · P pause · N new map · I HUD · F fullscreen · D debug</div>
+</div>
+
+<script>
